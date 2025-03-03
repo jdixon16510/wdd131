@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "acme", Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.container {
+  display: grid;
+  grid-template: auto 1fr auto / repeat(5, 1fr);
+  gap: 10px;
+  width: 80%;
+  height: 90vh;
+}
+
+header {
+  grid-column: 1 / -1;
+  background: #222;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  position: relative;
+  padding: 20px 0 0;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+nav {
+  width: 100%;
+  background: #333;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+.navigation li {
+  margin: 0 10px;
+  flex: 1 1 auto;
+  text-align: center;
+}
+.navigation a {
+  display: block;
+  color: #eee;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.navigation a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+main {
+  grid-column: 1 / 4;
+  border: 1px solid rgb(0 0 0 / 0.2);
+  padding: 20px;
+  background-color: #eee;
+}
+
+/* Aside content stays in column 3 */
+aside {
+  grid-column: 4 / 6;
+  border: 1px solid rgb(0 0 0 / 0.2);
+  background-color: #eee;
+  padding: 20px;
+}
+
+/* Footer spans across all columns */
+footer {
+  grid-column: 1 / -1;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
