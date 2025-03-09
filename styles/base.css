@@ -98,9 +98,9 @@ main {
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative; /* Needed for absolute positioning of h2 */
-  overflow: hidden; /* Ensures content does not overlap */
-  padding-top: 50px; /* Creates space for the header */
+  position: relative;
+  overflow: hidden;
+  padding-top: 50px; /* Add padding to the top to make space for the header */
 }
 
 /* Card Headers at the Very Top */
@@ -157,22 +157,22 @@ main {
 
 .link-list {
   display: flex;
-  flex-direction: column; /* Stack the links vertically */
-  gap: 10px; /* Add space between the links */
-  text-align: left; /* Align text to the left */
-  margin-top: 15px; /* Add top margin to give some space below the image */
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  margin-top: 15px;
 }
 
 .link-list a {
   text-decoration: none;
-  color: #2234d6; /* Set a contrasting color for the links */
-  font-size: 1.1rem; /* Adjust font size */
+  color: #2234d6;
+  font-size: 1.1rem;
   font-weight: bold;
-  transition: color 0.3s ease-in-out; /* Add transition for hover effect */
+  transition: color 0.3s ease-in-out;
 }
 
 .link-list a:hover {
-  color: #e74c3c; /* Change color on hover for a nice effect */
+  color: #e74c3c;
 }
 
 /* Footer */
