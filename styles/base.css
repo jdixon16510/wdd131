@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "acme", Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf0f1;
+}
+
+.container {
+  display: grid;
+  grid-template: auto 1fr auto / repeat(5, 1fr);
+  gap: 10px;
+  width: 80%;
+  height: 90vh;
+}
+
+/* Header */
+header {
+  grid-column: 1 / -1;
+  background: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  padding: 20px 0 0;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+/* Navigation */
+nav {
+  width: 100%;
+  background: #34495e;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin: 0 10px;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.navigation a {
+  display: block;
+  color: #ecf0f1;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.navigation a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+/* Main Section Layout */
+main {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* Left card takes 3/5, Right card takes 2/5 */
+  gap: 20px;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Card Styling */
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for absolute positioning of h2 */
+  overflow: hidden; /* Ensures content does not overlap */
+  padding-top: 50px; /* Creates space for the header */
+}
+
+/* Card Headers at the Very Top */
+.card h2 {
+  background-color: #2234d6;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Left Card: Ensuring Text on Left & Image on Right */
+.card.left {
+  display: grid;
+  grid-template-columns: 2fr 3fr; /* Text 2/5, Image 3/5 */
+  align-items: center;
+  padding: 20px;
+}
+
+/* Left Card Image */
+.card.left img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  justify-self: end;
+}
+
+/* Left Card Text */
+.card.left p {
+  padding: 20px;
+  text-align: left;
+}
+
+/* Right Card */
+.card.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right Card Image */
+.card.right img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column; /* Stack the links vertically */
+  gap: 10px; /* Add space between the links */
+  text-align: left; /* Align text to the left */
+  margin-top: 15px; /* Add top margin to give some space below the image */
+}
+
+.link-list a {
+  text-decoration: none;
+  color: #2234d6; /* Set a contrasting color for the links */
+  font-size: 1.1rem; /* Adjust font size */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+.link-list a:hover {
+  color: #e74c3c; /* Change color on hover for a nice effect */
+}
+
+/* Footer */
+footer {
+  grid-column: 1 / -1;
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

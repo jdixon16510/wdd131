@@ -3,9 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WDD 131</title>
+    <meta
+      name="description"
+      content="WDD 131 - Dynamic Web Fundamentals - Joseph Dixon - Home Page"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <script src="scripts/getdates.js" defer></script>
+    <title>WDD 131 - Dynamic Web Fundamentals - Joseph Dixon</title>
   </head>
   <body>
-    <h1>WDD 131 - Joseph Dixon</h1>
+    <div class="container">
+      <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Joseph Dixon</h1>
+        <nav>
+          <ul class="navigation">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/josephjdixon/"
+                title="LinkedIn Page"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="https://byupw.instructure.com/" title="BYUi Canvas"
+                >Canvas</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng"
+                title="Favorite scripture"
+                >Scripture</a
+              >
+            </li>
+            <li><a href="#" title="My final project">Final Project</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="card left">
+          <h2>About Me</h2>
+          <img src="images/profile.webp" alt="Placeholder Image" />
+          <p>
+            My name is Joseph James Dixon. I was named after my grandfather
+            Joseph Victor Dixon and my father James Nelson Dixon. I am a student
+            at Brigham Young University - Idaho studying Family History and Web
+            Design and Development. I am married to my beautiful wife, Joanne,
+            and we have four children and three grandchildren. I am a member of
+            The Church of Jesus Christ of Latter-day Saints. I enjoy family
+            history and spending time with my family.
+          </p>
+        </section>
+
+        <section class="card right">
+          <h2>Family History Resources</h2>
+          <img
+            src="images/houston-texas-temple-23480-main.webp"
+            alt="Placeholder Image"
+          />
+          <div class="link-list">
+            <a href="https://www.familysearch.org/" target="_blank"
+              >FamilySearch</a
+            >
+            <a href="https://www.ancestry.com/" target="_blank">Ancestry.com</a>
+            <a href="https://www.findmypast.com/" target="_blank"
+              >Find My Past</a
+            >
+            <a href="https://www.myheritage.com/" target="_blank">MyHeritage</a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; <span id="currentyear"></span> Joseph Dixon, USA</p>
+        <p id="lastModified"></p>
+      </footer>
+    </div>
   </body>
 </html>
