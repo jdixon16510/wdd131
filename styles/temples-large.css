@@ -1,7 +1,8 @@
-/* Remove Hamburger Button on Large Screens */
-.hamburger {
-   display: none;
-}
+@media (min-width: 768px) {
+   /* Remove Hamburger Button on Large Screens */
+   .hamburger {
+       display: none;
+   }
 
 /* Navigation is always visible in large screens */
 nav {
