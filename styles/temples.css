@@ -1,6 +1,17 @@
+/* Define CSS Variables */
+:root {
+   --primary-bg: #333;
+   --secondary-bg: #444;
+   --text-color: white;
+   --hover-color: #ffcc00;
+   --font-main: 'Roboto', sans-serif;
+   --nav-width: 200px;
+   --spacing: 10px;
+}
+
 /* General Styles */
 body {
-   font-family: 'Roboto', sans-serif;
+   font-family: var(--font-main);
    margin: 0;
    padding: 0;
    text-align: center;
@@ -11,9 +22,9 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: #333;
-   color: white;
-   padding: 10px;
+   background-color: var(--primary-bg);
+   color: var(--text-color);
+   padding: var(--spacing);
    position: relative;
 }
 
@@ -22,7 +33,7 @@ header {
    background: none;
    border: none;
    font-size: 2rem;
-   color: white;
+   color: var(--text-color);
    cursor: pointer;
    z-index: 2;
 }
@@ -32,13 +43,13 @@ nav {
    position: absolute;
    top: 60px;
    right: 0;
-   background-color: #444;
-   width: 200px;
+   background-color: var(--secondary-bg);
+   width: var(--nav-width);
    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-   display: none; /* Menu hidden initially */
+   display: none;
    flex-direction: column;
    text-align: left;
-   padding: 10px;
+   padding: var(--spacing);
 }
 
 nav ul {
@@ -53,8 +64,14 @@ nav ul li {
 
 nav ul li a {
    text-decoration: none;
-   color: white;
+   color: var(--text-color);
    display: block;
+   transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+   color: var(--hover-color);
 }
 
 /* Show Menu When Active */
@@ -62,18 +79,12 @@ nav.active {
    display: flex;
 }
 
-nav a:hover {
-   font-weight: bold;
-   text-decoration: underline;
-   text-decoration-color: yellow;
- }
-
 /* Gallery */
 .gallery {
    display: grid;
    grid-template-columns: 1fr;
-   gap: 10px;
-   padding: 10px;
+   gap: var(--spacing);
+   padding: var(--spacing);
 }
 
 figure {
@@ -87,7 +98,7 @@ figure img {
 
 /* Footer */
 footer {
-   background-color: #222;
-   color: white;
-   padding: 10px;
+   background-color: var(--primary-bg);
+   color: var(--text-color);
+   padding: var(--spacing);
 }
