@@ -1,9 +1,9 @@
 /* Define CSS Variables */
 :root {
-   --primary-bg: #333;
-   --secondary-bg: #444;
-   --text-color: white;
-   --hover-color: #ffcc00;
+   --primary-bg: #1E3A8A;  /* Dark Blue */
+   --secondary-bg: #1E40AF; /* Medium Blue */
+   --text-color: #F8FAFC;   /* Light Grayish White */
+   --hover-color: #38BDF8;  /* Sky Blue */
    --font-main: 'Roboto', sans-serif;
    --nav-width: 200px;
    --spacing: 10px;
@@ -66,12 +66,14 @@ nav ul li a {
    text-decoration: none;
    color: var(--text-color);
    display: block;
-   transition: color 0.3s ease-in-out;
+   transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+   padding-bottom: 5px;
 }
 
 /* Hover Effect */
 nav ul li a:hover {
    color: var(--hover-color);
+   font-size: 1.2rem; /* Slightly larger on hover */
 }
 
 /* Show Menu When Active */
@@ -89,11 +91,18 @@ nav.active {
 
 figure {
    margin: 0;
+   background: white;
+   border-radius: 8px;
+   padding: var(--spacing);
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   text-align: center;
 }
 
 figure img {
-   width: 100%;
-   height: auto;
+   width: 100%;         /* Ensures images take up full container */
+   aspect-ratio: 4 / 3;      /* Maintain aspect ratio (4:3) */
+   object-fit: cover;   /* Ensures images maintain aspect ratio */
+   border-radius: 10px; /* Rounded corners */
 }
 
 /* Footer */
