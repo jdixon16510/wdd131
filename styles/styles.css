@@ -3,20 +3,20 @@
    --font-family: "Raleway", sans-serif;
    --font-size-header: 1.5em;
 
-   /* Scotland Flag Colors */
-   --color-bg: #e6f0fa; /* Soft off-white/blue background for contrast */
-   --color-header-bg: #005EB8; /* Scottish blue */
-   --color-header-text: #ffffff; /* White text */
+   /* Landscape Colors */
+   --color-bg: #f2efe8;                 /* Lighter warm background */
+   --color-header-bg: #3a5226;          /* Deeper green for better contrast */
+   --color-header-text: #ffffff;        /* Pure white for clarity */
 
-   --color-box-bg: #ffffff; /* Keep info boxes white like flag cross */
-   --color-box-border: #005EB8; /* Border in Scottish blue */
-   --color-box-shadow: rgba(0, 94, 184, 0.2); /* Soft shadow using flag blue */
+   --color-box-bg: #fffdf9;             /* Lighter off-white */
+   --color-box-border: #5d3b23;         /* Darker brown for stronger edges */
+   --color-box-shadow: rgba(93, 59, 35, 0.2);
 
-   --color-overlay-bg: rgba(0, 94, 184, 0.8); /* Transparent flag blue */
+   --color-overlay-bg: rgba(58, 82, 38, 0.88); /* More saturated green overlay */
    --color-overlay-text: #ffffff;
 
-   --color-weather-box-bg: rgba(255, 255, 255, 0.95);
-   --color-weather-text: #003366; /* Dark navy text for contrast */
+   --color-weather-box-bg: #ffffff;
+   --color-weather-text: #2b2b2b;       /* Darker charcoal for readability */
 
    --box-radius: 8px;
    --box-shadow: 0 0 10px var(--color-box-shadow);
@@ -72,14 +72,18 @@ header {
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 10px;
+   gap: 20px;
 }
 
 .flag-icon {
-   width: 40px;
+   width: 60px;
    height: auto;
    display: block;
-   border-radius: 2px; /* optional */
+   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+   margin-right: 10px;
+   padding: 4px;
+   background-color: var(--color-bg);
+   
 }
 
 .hero {

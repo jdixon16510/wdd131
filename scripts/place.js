@@ -12,21 +12,20 @@ function calculateWindChill(t, v) {
    );
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-   const windChillElems = document.querySelectorAll(".windchill");
+function updateWindChill() {
+   const elements = document.querySelectorAll(".windchill");
 
    const validTemp = temperature <= 10;
-   const validSpeed = windSpeed > 4.8;
+   const validWind = windSpeed > 4.8;
 
-   const result = (validTemp && validSpeed)
+   const result = (validTemp && validWind)
       ? `${calculateWindChill(temperature, windSpeed)}°C`
       : "N/A";
 
-   // Update all windchill value elements
-   windChillElems.forEach(elem => {
-      elem.textContent = result;
+   elements.forEach(el => {
+      el.textContent = result;
    });
-});
+}
 
 // Run on page load
 document.addEventListener('DOMContentLoaded', updateWindChill);
