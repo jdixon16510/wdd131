@@ -136,10 +136,6 @@ header {
    min-width: var(--label-width);
 }
 
-.weather-emoji {
-   font-size: var(--emoji-size);
-   margin-left: var(--emoji-spacing);
-}
 
 /* Footer */
 footer {
@@ -150,9 +146,12 @@ footer {
    margin-top: 20px;
 }
 
-.weather-icon,
-.weather-emoji {
+.weather-icon {
    display: none;
+}
+
+.weather-box h2::after {
+   content: "";
 }
 
 /* ========== SMALL SCREENS ========== */
@@ -213,12 +212,16 @@ footer {
       pointer-events: auto;
    }
 
+   .weather-box h2::after {
+      content: " ☁️";
+      font-size: var(--emoji-size);
+      margin-left: var(--emoji-spacing);
+      vertical-align: middle;
+   }
+
    .country-box .label,
    .country-box .value {
       color: var(--color-overlay-text);
    }
 
-   .weather-emoji.desktop-only {
-      display: inline;
-   }
 }

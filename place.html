@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8" />
+   <meta charset="UTF-8"/>
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta name="description" content="Country Page with Weather and Information" />
    <meta name="author" content="Joseph Dixon" />
@@ -22,18 +22,63 @@
          <h1>Scotland</h1>
       </div>
    </header>
+   <main>
+      
+      <!-- Hero Image -->
+      <div class="hero-container">
+         <picture>
+            <source srcset="images/scotland-small.webp" media="(max-width: 600px)" />
+            <source srcset="images/scotland-large.webp" media="(min-width: 601px)" />
+            <img src="images/scotland-large.webp" alt="Scotland landscape" class="hero" />
+         </picture>
 
-   <!-- Hero Image -->
-   <div class="hero-container">
-      <picture>
-         <source srcset="images/scotland-small.webp" media="(max-width: 600px)" />
-         <source srcset="images/scotland-large.webp" media="(min-width: 601px)" />
-         <img src="images/scotland-large.webp" alt="Scotland landscape" class="hero" />
-      </picture>
+         <!-- Overlay Info (for large screens only) -->
+         <div class="overlay">
+            <div class="info-box country-box">
+               <h2>Information</h2>
+               <div class="info-grid">
+                  <div class="label">Area:</div>
+                  <div class="value">77,933 sq km</div>
+                  <div class="label">Capital:</div>
+                  <div class="value">Edinburgh</div>
+                  <div class="label">Population:</div>
+                  <div class="value">5.5 million</div>
+                  <div class="label">Currency:</div>
+                  <div class="value">Pound Sterling (£)</div>
+                  <div class="label">Languages:</div>
+                  <div class="value">English, Scottish Gaelic, Scots</div>
+                  <div class="label">Time Zone:</div>
+                  <div class="value">Greenwich Mean Time</div>
+                  <div class="label">Calling Code:</div>
+                  <div class="value">+44</div>
+               </div>
+            </div>
 
-      <!-- Overlay Info (for large screens only) -->
-      <div class="overlay">
-         <div class="info-box country-box">
+            <div class="info-box weather-box">
+               <h2>Weather</h2>
+               <div class="info-grid">
+                  <div class="label">Temperature:</div>
+                  <div class="value">9°C</div>
+                  <div class="label">Conditions:</div>
+                  <div class="value">Cloudy</div>
+                  <div class="label">Humidity:</div>
+                  <div class="value">80%</div>
+                  <div class="label">Wind:</div>
+                  <div class="value">10 km/h</div>
+                  <div class="label">Wind Chill</div>
+                  <div class="value windchill">N/A</div>
+                  <div class="label">Sunrise:</div>
+                  <div class="value">6:00 AM</div>
+                  <div class="label">Sunset:</div>
+                  <div class="value">8:30 PM</div>
+               </div>            
+            </div>
+         </div>
+      </div>
+
+      <!-- Centered content for small screens -->
+      <div class="content-container">
+         <div class="info-box">
             <h2>Information</h2>
             <div class="info-grid">
                <div class="label">Area:</div>
@@ -53,74 +98,28 @@
             </div>
          </div>
 
-         <div class="info-box weather-box">
-            <h2>
-               <span class="weather-heading">Weather</span>
-               <span class="weather-emoji desktop-only">☁️</span>
-             </h2>
+         <div class="info-box">
+            <h2>Weather</h2>
             <div class="info-grid">
                <div class="label">Temperature:</div>
-               <div class="value">9°C</div>
-               <div class="label">Conditions:</div>
-               <div class="value">Cloudy</div>
-               <div class="label">Humidity:</div>
-               <div class="value">80%</div>
-               <div class="label">Wind:</div>
-               <div class="value">10 km/h</div>
-               <div class="label">Wind Chill</div>
-               <div class="value windchill">N/A</div>
-               <div class="label">Sunrise:</div>
-               <div class="value">6:00 AM</div>
-               <div class="label">Sunset:</div>
-               <div class="value">8:30 PM</div>
-            </div>            
+                  <div class="value">9°C</div>
+                  <div class="label">Conditions:</div>
+                  <div class="value">Cloudy</div>
+                  <div class="label">Humidity:</div>
+                  <div class="value">80%</div>
+                  <div class="label">Wind:</div>
+                  <div class="value">10 km/h</div>
+                  <div class="label">Wind Chill</div>
+                  <div class="value windchill">N/A</div>
+                  <div class="label">Sunrise:</div>
+                  <div class="value">6:00 AM</div>
+                  <div class="label">Sunset:</div>
+                  <div class="value">8:30 PM</div>
+            </div>
+            <img src="images/cloudy.svg" alt="Cloudy icon" class="weather-icon mobile-only" />
          </div>
       </div>
-   </div>
-
-   <!-- Centered content for small screens -->
-   <div class="content-container">
-      <div class="info-box">
-         <h2>Information</h2>
-         <div class="info-grid">
-            <div class="label">Area:</div>
-            <div class="value">77,933 sq km</div>
-            <div class="label">Capital:</div>
-            <div class="value">Edinburgh</div>
-            <div class="label">Population:</div>
-            <div class="value">5.5 million</div>
-            <div class="label">Currency:</div>
-            <div class="value">Pound Sterling (£)</div>
-            <div class="label">Languages:</div>
-            <div class="value">English, Scottish Gaelic, Scots</div>
-            <div class="label">Time Zone:</div>
-            <div class="value">Greenwich Mean Time</div>
-            <div class="label">Calling Code:</div>
-            <div class="value">+44</div>
-         </div>
-      </div>
-
-      <div class="info-box">
-         <h2>Weather</h2>
-         <div class="info-grid">
-            <div class="label">Temperature:</div>
-               <div class="value">9°C</div>
-               <div class="label">Conditions:</div>
-               <div class="value">Cloudy</div>
-               <div class="label">Humidity:</div>
-               <div class="value">80%</div>
-               <div class="label">Wind:</div>
-               <div class="value">10 km/h</div>
-               <div class="label">Wind Chill</div>
-               <div class="value windchill">N/A</div>
-               <div class="label">Sunrise:</div>
-               <div class="value">6:00 AM</div>
-               <div class="label">Sunset:</div>
-               <div class="value">8:30 PM</div>
-         </div>
-         <img src="images/cloudy.svg" alt="Cloudy icon" class="weather-icon mobile-only" />
-      </div>
-   </div>
+   </main>
 
    <footer>
       <p>&copy; <span id="year"></span> Joseph Dixon, USA</p>
