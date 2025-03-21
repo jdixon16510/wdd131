@@ -1,70 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Country Page with Weather and Information">
-   <meta name="author" content="Joseph Dixon">
-   <link rel="stylesheet" href="place.css" media="screen and (max-width: 600px)">
-   <link rel="stylesheet" href="place-large.css" media="screen and (min-width: 601px)">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="description" content="Country Page with Weather and Information" />
+   <meta name="author" content="Joseph Dixon" />
+   <link rel="stylesheet" href="styles/styles.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+   />
    <script src="scripts/place.js" defer></script>
-   <title>WDD 131 - Dynamic Web Fundamentals - Joseph Dixon - Country Page</title>
+   <title>Country Info - Scotland</title>
 </head>
 <body>
    <header>
-      <h1>Scotland</h1>
+      <div class="header-content">
+         <img src="images/scotland-flag.svg" alt="Scotland Flag" class="flag-icon" />
+         <h1>Scotland</h1>
+      </div>
    </header>
-   
-   <!-- Hero Section -->
+
+   <!-- Hero Image -->
    <div class="hero-container">
       <picture>
-          <source srcset="images/scotland-small.webp" media="(max-width: 600px)">
-          <source srcset="images/scotland-large.webp" media="(min-width: 601px)">
-          <img src="images/scotland-large.webp" alt="Scotland Image" class="hero">
+         <source srcset="images/scotland-small.webp" media="(max-width: 600px)" />
+         <source srcset="images/scotland-large.webp" media="(min-width: 601px)" />
+         <img src="images/scotland-large.webp" alt="Scotland landscape" class="hero" />
       </picture>
 
-      <!-- Large Screen Overlay Content -->
+      <!-- Overlay Info (for large screens only) -->
       <div class="overlay">
-         <div class="country-info">
-             <h2>Country Information</h2>
-             <p>Country: Scotland</p>
-             <p>Capital: Edinburgh</p>
-             <p>Population: 5.5 million</p>
+         <div class="info-box country-box">
+            <h2>Information</h2>
+            <div class="info-grid">
+               <div class="label">Area:</div>
+               <div class="value">77,933 sq km</div>
+               <div class="label">Capital:</div>
+               <div class="value">Edinburgh</div>
+               <div class="label">Population:</div>
+               <div class="value">5.5 million</div>
+               <div class="label">Currency:</div>
+               <div class="value">Pound Sterling (£)</div>
+               <div class="label">Languages:</div>
+               <div class="value">English, Scottish Gaelic, Scots</div>
+               <div class="label">Time Zone:</div>
+               <div class="value">Greenwich Mean Time</div>
+               <div class="label">Calling Code:</div>
+               <div class="value">+44</div>
+            </div>
          </div>
 
-         <div class="weather-info-box">
-             <h2>Weather Information</h2>
-             <p>Temperature: 15°C</p>
-             <p>Condition: Cloudy</p>
-             <svg class="weather-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                 <ellipse cx="32" cy="35" rx="14" ry="8" fill="gray"/>
-                 <ellipse cx="20" cy="38" rx="12" ry="6" fill="lightgray"/>
-             </svg>
+         <div class="info-box weather-box">
+            <h2>
+               <span class="weather-heading">Weather</span>
+               <span class="weather-emoji desktop-only">☁️</span>
+             </h2>
+            <div class="info-grid">
+               <div class="label">Temperature:</div>
+               <div class="value">9°C</div>
+               <div class="label">Conditions:</div>
+               <div class="value">Cloudy</div>
+               <div class="label">Humidity:</div>
+               <div class="value">80%</div>
+               <div class="label">Wind:</div>
+               <div class="value">10 km/h</div>
+               <div class="label">Wind Chill</div>
+               <div class="value windchill">N/A</div>
+               <div class="label">Sunrise:</div>
+               <div class="value">6:00 AM</div>
+               <div class="label">Sunset:</div>
+               <div class="value">8:30 PM</div>
+            </div>            
          </div>
       </div>
    </div>
 
-   <!-- Small Screen Sections (Hidden on Large Screens) -->
-   <div class="mobile-container mobile-only">
-       <div class="section">
-           <h2>Country Information</h2>
-           <p>Country: Scotland</p>
-           <p>Capital: Edinburgh</p>
-           <p>Population: 5.5 million</p>
-       </div>
+   <!-- Centered content for small screens -->
+   <div class="content-container">
+      <div class="info-box">
+         <h2>Information</h2>
+         <div class="info-grid">
+            <div class="label">Area:</div>
+            <div class="value">77,933 sq km</div>
+            <div class="label">Capital:</div>
+            <div class="value">Edinburgh</div>
+            <div class="label">Population:</div>
+            <div class="value">5.5 million</div>
+            <div class="label">Currency:</div>
+            <div class="value">Pound Sterling (£)</div>
+            <div class="label">Languages:</div>
+            <div class="value">English, Scottish Gaelic, Scots</div>
+            <div class="label">Time Zone:</div>
+            <div class="value">Greenwich Mean Time</div>
+            <div class="label">Calling Code:</div>
+            <div class="value">+44</div>
+         </div>
+      </div>
 
-       <div class="section">
-           <h2>Weather Information</h2>
-           <p>Temperature: 15°C</p>
-           <p>Condition: Cloudy</p>
-           <svg class="weather-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-               <ellipse cx="32" cy="35" rx="14" ry="8" fill="gray"/>
-               <ellipse cx="20" cy="38" rx="12" ry="6" fill="lightgray"/>
-           </svg>
-       </div>
+      <div class="info-box">
+         <h2>Weather</h2>
+         <div class="info-grid">
+            <div class="label">Temperature:</div>
+               <div class="value">9°C</div>
+               <div class="label">Conditions:</div>
+               <div class="value">Cloudy</div>
+               <div class="label">Humidity:</div>
+               <div class="value">80%</div>
+               <div class="label">Wind:</div>
+               <div class="value">10 km/h</div>
+               <div class="label">Wind Chill</div>
+               <div class="value windchill">N/A</div>
+               <div class="label">Sunrise:</div>
+               <div class="value">6:00 AM</div>
+               <div class="label">Sunset:</div>
+               <div class="value">8:30 PM</div>
+         </div>
+         <img src="images/cloudy.svg" alt="Cloudy icon" class="weather-icon mobile-only" />
+      </div>
    </div>
 
    <footer>
