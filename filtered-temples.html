@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Temple Album</title>
+   <meta
+      name="description"
+      content="Temple Album of favorite temples and pictures">
+   <meta name="author" content="Joseph Dixon">
+   <link rel="stylesheet" href="styles/filtered-temples.css">
+   <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet">
+   <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+   <header>
+      <h1>Temple Album</h1>
+      <!-- Hamburger Button (Hidden on large screens) -->
+      <button id="menu-toggle" class="hamburger">&#9776;</button>
+      <!-- Navigation Menu -->
+      <nav id="nav-menu">
+          <ul>
+            <li><a href="#" data-filter="Home">Home</a></li>
+            <li><a href="#" data-filter="Old">Old</a></li>
+            <li><a href="#" data-filter="New">New</a></li>
+            <li><a href="#" data-filter="Large">Large</a></li>
+            <li><a href="#" data-filter="Small">Small</a></li>
+          </ul>
+      </nav>
+  </header>
+
+    <main>
+      <h2>Temple Gallery</h2>
+      <p id="filter-info">Showing: All Temples</p>
+      <div class="gallery"></div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Joseph Dixon, USA</p>
+      <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

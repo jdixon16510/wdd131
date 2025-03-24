@@ -1,0 +1,48 @@
+@media (min-width: 768px) {
+   /* Remove Hamburger Button on Large Screens */
+   .hamburger {
+       display: none;
+   }
+
+   /* Show Navigation Menu Always */
+   nav {
+       display: flex !important;
+       position: static;
+       background: none;
+       width: auto;
+       box-shadow: none;
+       justify-content: center;
+   }
+
+   nav ul {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       gap: var(--spacing);
+   }
+
+   nav ul li {
+       padding: var(--spacing);
+   }
+
+   nav ul li a {
+       color: var(--text-color);
+       text-decoration: none;
+       font-size: 1.2rem;
+       padding-bottom: 5px;
+   }
+
+   nav ul li a:hover {
+      font-size: 1.4rem; /* Larger when hovered */
+  }
+
+   /* Grid Layout for Images */
+   .gallery {
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       gap: var(--spacing);
+   }
+
+   figure img {
+      aspect-ratio: 16 / 9;
+  }
+}

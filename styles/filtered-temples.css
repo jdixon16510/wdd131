@@ -1,0 +1,120 @@
+/* Define CSS Variables */
+:root {
+   --primary-bg: #1E3A8A;  /* Dark Blue */
+   --secondary-bg: #1E40AF; /* Medium Blue */
+   --text-color: #F8FAFC;   /* Light Grayish White */
+   --hover-color: #38BDF8;  /* Sky Blue */
+   --font-main: 'Roboto', sans-serif;
+   --nav-width: 200px;
+   --spacing: 10px;
+}
+
+/* General Styles */
+body {
+   font-family: var(--font-main);
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+
+/* Header */
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--primary-bg);
+   color: var(--text-color);
+   padding: var(--spacing);
+   position: relative;
+}
+
+/* Hamburger Button (Only visible on mobile) */
+.hamburger {
+   background: none;
+   border: none;
+   font-size: 2rem;
+   color: var(--text-color);
+   cursor: pointer;
+   z-index: 2;
+}
+
+/* Navigation Menu - Hidden by default on mobile */
+nav {
+   position: absolute;
+   top: 60px;
+   right: 0;
+   background-color: var(--secondary-bg);
+   width: var(--nav-width);
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+   display: none;
+   flex-direction: column;
+   text-align: left;
+   padding: var(--spacing);
+}
+
+nav ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+nav ul li {
+   padding: 15px;
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: var(--text-color);
+   display: block;
+   transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+   padding-bottom: 5px;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+   color: var(--hover-color);
+   font-size: 1.2rem; /* Slightly larger on hover */
+}
+
+/* Show Menu When Active */
+nav.active {
+   display: flex;
+}
+
+/* Gallery */
+.gallery {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: var(--spacing);
+   padding: var(--spacing);
+}
+
+figure {
+   margin: 0;
+   background: white;
+   border-radius: 8px;
+   padding: var(--spacing);
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   text-align: center;
+}
+
+figure img {
+   width: 100%;         /* Ensures images take up full container */
+   aspect-ratio: 4 / 3;      /* Maintain aspect ratio (4:3) */
+   object-fit: cover;   /* Ensures images maintain aspect ratio */
+   border-radius: 10px; /* Rounded corners */
+}
+
+/* Filter Info Text */
+#filter-info {
+   font-size: 1.1rem;
+   color: #333;
+   margin-bottom: var(--spacing);
+}
+
+/* Footer */
+footer {
+   background-color: var(--primary-bg);
+   color: var(--text-color);
+   padding: var(--spacing);
+}

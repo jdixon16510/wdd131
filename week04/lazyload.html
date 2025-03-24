@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta
+      name="description"
+      content="WDD 131 - Dynamic Web Fundamentals - Joseph Dixon - Lazy Load Example">
+    <meta name="author" content="Joseph Dixon">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <script src="scripts/lazyload.js" defer></script>
+   <title>Lazy Load</title>
+</head>
+<body>
+   <main>
+      <h1>Lazy Load Example</h1>
+      <p>
+         The images below will only load when they are within the viewport of the
+         browser. Scroll down to see them load.
+      </p>
+
+      <div class="image-container">
+         <picture>
+            <img src="images/396-200x300.jpg" alt="Placeholder" loading="lazy" width="400" height="600">
+         </picture>
+         <picture>
+            <img src="images/396-200x300-2.jpg" alt="Placeholder" loading="lazy" width="400" height="600">
+         </picture>
+         <picture>
+            <img src="images/396-200x300-3.jpg" alt="Placeholder" loading="lazy" width="400" height="600">
+         </picture>
+         <picture>
+            <img src="images/396-200x300-4.jpg" alt="Placeholder" loading="lazy" width="400" height="600">
+         </picture>
+         <picture>
+            <img src="images/396-200x300-5.jpg" alt="Placeholder" loading="lazy" width="400" height="600">
+         </picture>
+         <picture>
+            <img src="images/396-200x300-6.jpg" alt="Placeholder" loading="lazy" width="400" height="600">
+         </picture>
+      </div>
+   </main>
+   <footer>
+      <p>&copy; <span id="year"></span> Joseph Dixon, USA</p>
+      <p>Last Modified: <span id="last-modified"></span></p>
+   </footer>
+</body>
+</html>
