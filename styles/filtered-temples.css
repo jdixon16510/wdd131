@@ -105,6 +105,13 @@ figure img {
    border-radius: 10px; /* Rounded corners */
 }
 
+figure figcaption strong {
+   font-size: 1.2rem; /* Increase as needed */
+   font-weight: bold;
+   display: block;
+   margin-top: var(--spacing);
+}
+
 /* Filter Info Text */
 #filter-info {
    font-size: 1.1rem;

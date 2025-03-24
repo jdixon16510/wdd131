@@ -95,19 +95,19 @@ const filterInfo = document.getElementById("filter-info");
 function createTempleCard(temple) {
     const card = document.createElement("figure");
 
-    const img = document.createElement("img");
-    img.src = temple.imageUrl;
-    img.alt = temple.templeName;
-    img.loading = "lazy";
-
     const name = document.createElement("figcaption");
     name.innerHTML = `<strong>${temple.templeName}</strong><br>
         Location: ${temple.location}<br>
         Dedicated: ${temple.dedicated}<br>
         Area: ${temple.area.toLocaleString()} sq ft`;
 
-    card.appendChild(img);
+    const img = document.createElement("img");
+    img.src = temple.imageUrl;
+    img.alt = temple.templeName;
+    img.loading = "lazy";
+
     card.appendChild(name);
+    card.appendChild(img);
     gallery.appendChild(card);
 }
 
