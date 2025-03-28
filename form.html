@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>form</title>
+<meta name="description" content="Product Review Form WDD131 Joseph Dixon ">
+<meta name="author" content="Joseph Dixon">
+<link rel="stylesheet" href="styles/form.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script defer src="scripts/form.js"></script>
+</head>
+<body>
+   <h1>Product Review</h1>
+
+   <form action="review.html" method="get">
+     <!-- Product Name -->
+     <label for="product">Product Name:</label>
+     <select id="product" name="product" required>
+       <option value="" disabled selected>Select a Product ...</option>
+     </select>
+     <br><br>
+ 
+     <!-- Overall Rating -->
+     <fieldset>
+      <legend>Overall Rating:</legend>
+      <div class="rating-group">
+        <div class="rating-item">
+          <label for="rating1">☆</label>
+          <input type="radio" id="rating1" name="rating" value="1" required>
+        </div>
+        <div class="rating-item">
+          <label for="rating2">☆☆</label>
+          <input type="radio" id="rating2" name="rating" value="2">
+        </div>
+        <div class="rating-item">
+          <label for="rating3">☆☆☆</label>
+          <input type="radio" id="rating3" name="rating" value="3">
+        </div>
+        <div class="rating-item">
+          <label for="rating4">☆☆☆☆</label>
+          <input type="radio" id="rating4" name="rating" value="4">
+        </div>
+        <div class="rating-item">
+          <label for="rating5">☆☆☆☆☆</label>
+          <input type="radio" id="rating5" name="rating" value="5">
+        </div>
+      </div>
+    </fieldset>
+     <br>
+ 
+     <!-- Date of Installation -->
+     <label for="installDate">Date of Installation:</label>
+     <input type="date" id="installDate" name="installDate" required>
+     <br><br>
+ 
+     <!-- Useful Features -->
+     <fieldset>
+       <legend>Useful Features (Check all that apply):</legend>
+       <input type="checkbox" id="feature1" name="features" value="Easy to Use">
+       <label for="feature1">Easy to Use</label><br>
+ 
+       <input type="checkbox" id="feature2" name="features" value="Durable">
+       <label for="feature2">Durable</label><br>
+ 
+       <input type="checkbox" id="feature3" name="features" value="Affordable">
+       <label for="feature3">Affordable</label><br>
+ 
+       <input type="checkbox" id="feature4" name="features" value="High Performance">
+       <label for="feature4">High Performance</label>
+     </fieldset>
+     <br>
+ 
+     <!-- Written Review -->
+     <label for="review">Written Review:</label><br>
+     <textarea id="review" name="review" rows="4" cols="50" placeholder="Write your review here..."></textarea>
+     <br><br>
+ 
+     <!-- User Name -->
+     <label for="username">Your Name:</label>
+     <input type="text" id="username" name="username">
+     <br><br>
+ 
+     <!-- Submit -->
+     <input type="submit" value="Submit Review">
+   </form>
+ 
+   <footer>
+      <p>&copy; <span id="year"></span> Joseph Dixon, USA</p>
+      <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
