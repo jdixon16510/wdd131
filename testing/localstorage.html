@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temple Attendance Tracker</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      max-width: 600px;
+    }
+    input, button {
+      margin: 5px 0;
+      padding: 8px;
+      width: 100%;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #f0f0f0;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Temple Attendance Tracker</h2>
+
+  <h3>Save Attendance</h3>
+  <input type="text" id="name" placeholder="Person's Name">
+  <input type="text" id="temple" placeholder="Temple Name">
+  <input type="date" id="date">
+  <button onclick="saveAttendance()">Save Attendance</button>
+
+  <hr>
+
+  <h3>Load Attendance</h3>
+  <input type="text" id="searchName" placeholder="Person's Name">
+  <button onclick="loadAttendance()">Load Attendance</button>
+
+  <ul id="output"></ul>
+
+  <script>
+    function saveAttendance() {
+      const name = document.getElementById("name").value.trim();
+      const temple = document.getElementById("temple").value.trim();
+      const date = document.getElementById("date").value;
+
+      if (!name || !temple || !date) {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      let records = JSON.parse(localStorage.getItem(name)) || [];
+
+      records.push({ temple, date });
+
+      localStorage.setItem(name, JSON.stringify(records));
+
+      alert(`Attendance saved for ${name}`);
+      document.getElementById("name").value = '';
+      document.getElementById("temple").value = '';
+      document.getElementById("date").value = '';
+    }
+
+    function loadAttendance() {
+      const name = document.getElementById("searchName").value.trim();
+      const output = document.getElementById("output");
+      output.innerHTML = '';
+
+      if (!name) {
+        alert("Please enter a person's name to search.");
+        return;
+      }
+
+      const records = JSON.parse(localStorage.getItem(name));
+
+      if (!records || records.length === 0) {
+        output.innerHTML = `<li>No attendance records found for ${name}</li>`;
+        return;
+      }
+
+      output.innerHTML = `<li><strong>${name}'s Attendance:</strong></li>`;
+      records.forEach(record => {
+        const li = document.createElement("li");
+        li.textContent = `${record.temple} on ${record.date}`;
+        output.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+</html>
