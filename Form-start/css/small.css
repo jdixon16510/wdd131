@@ -83,7 +83,7 @@ main {
 .wf1 fieldset input[type="tel"],
 .wf1 fieldset input[type="url"],
 .wf1 fieldset input[type="number"],
-,wf1 fieldset input[type="date"],
+.wf1 fieldset input[type="date"],
 .wf1 select {
     display: block;
     border: solid 1px #999;
