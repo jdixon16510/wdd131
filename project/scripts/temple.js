@@ -149,7 +149,9 @@ function displayTemple(name) {
   // Extra data example
   document.getElementById("templeAdditional").innerHTML = `
     <strong>Size:</strong> ${temple.Size || "N/A"}<br>
-    <strong>Ordinance Rooms:</strong> ${temple.OrdinanceRooms || "N/A"}
+    <strong>Ordinance Rooms:</strong> ${temple.Ordinance || "N/A"}
+    <strong>Sealing Rooms:</strong> ${temple.Sealing || "N/A"}
+    <strong>Baptistry Rooms:</strong> ${temple.Baptistry || "N/A"}
   `;
 }
 
