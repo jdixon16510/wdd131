@@ -91,3 +91,4 @@ function showRandomTemple() {
 document.getElementById("templeHistory").innerHTML = historyHTML;
 
 }
+

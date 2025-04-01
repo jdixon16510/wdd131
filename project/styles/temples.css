@@ -251,6 +251,16 @@
    padding: 10px;
    border-radius: 5px;
  }
+
+ /* img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+} */
+
  
  
  
