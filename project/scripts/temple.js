@@ -147,12 +147,17 @@ function displayTemple(name) {
   document.getElementById("templeHistory").innerHTML = historyHTML;
 
   // Extra data example
-  document.getElementById("templeAdditional").innerHTML = `
-    <strong>Size:</strong> ${temple.Size || "N/A"}<br>
-    <strong>Ordinance Rooms:</strong> ${temple.Ordinance || "N/A"}
-    <strong>Sealing Rooms:</strong> ${temple.Sealing || "N/A"}
-    <strong>Baptistry Rooms:</strong> ${temple.Baptistry || "N/A"}
-  `;
+  const formattedSize = temple.Size
+  ? `${Number(temple.Size).toLocaleString()} SqFt`
+  : "N/A";
+
+document.getElementById("templeAdditional").innerHTML = `
+  <br>
+  <strong>Size:</strong> ${formattedSize}<br>
+  <strong>Ordinance Rooms:</strong> ${temple.Ordinance || "N/A"}
+  <strong>Sealing Rooms:</strong> ${temple.Sealing || "N/A"}
+  <strong>Baptistry Rooms:</strong> ${temple.Baptistry || "N/A"}
+`;
 }
 
 // Date formatter
@@ -174,3 +179,12 @@ function formatDate(dateInput) {
     day: "numeric"
   });
 }
+
+
+document.querySelectorAll("#nav-menu a").forEach(link => {
+   link.addEventListener("click", () => {
+     navMenu.classList.remove("active");
+     menuToggle.textContent = "☰";
+   });
+ });
+ 

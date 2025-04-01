@@ -21,7 +21,7 @@ function fetchTempleData() {
     .catch(err => console.error("Error loading Excel file:", err));
 }
 
-// Hamburger menu toggle
+// Hamburger toggle
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 
@@ -30,21 +30,27 @@ menuToggle.addEventListener("click", () => {
   menuToggle.textContent = navMenu.classList.contains("active") ? "✖" : "☰";
 });
 
-// Format date (handles string or Excel date numbers)
+// Auto-close menu when clicking a link
+document.addEventListener("click", (e) => {
+  if (e.target.closest("#nav-menu a")) {
+    navMenu.classList.remove("active");
+    menuToggle.textContent = "☰";
+  }
+});
+
+// Format date
 function formatDate(dateInput) {
   if (!dateInput) return "N/A";
 
   let date;
   if (typeof dateInput === "number") {
-    // Excel date number → convert
     const parsed = XLSX.SSF.parse_date_code(dateInput);
     date = new Date(parsed.y, parsed.m - 1, parsed.d);
   } else {
     date = new Date(dateInput);
   }
 
-  if (isNaN(date)) return dateInput; // fallback if parsing fails
-
+  if (isNaN(date)) return dateInput;
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -87,8 +93,6 @@ function showRandomTemple() {
   <strong>Ground Breaking:</strong> ${formatDate(temple.GroundBreaking)}<br>
   <strong>Dedication:</strong> ${formatDate(temple.Dedication)}<br>
   <strong>Dedicated By:</strong> ${temple.BY || "N/A"}
-`;
-document.getElementById("templeHistory").innerHTML = historyHTML;
-
+  `;
+  document.getElementById("templeHistory").innerHTML = historyHTML;
 }
-

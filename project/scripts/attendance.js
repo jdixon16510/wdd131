@@ -222,3 +222,11 @@ searchNameSelect.addEventListener("change", () => {
 window.addEventListener("load", () => {
   loadNameOptions();
 });
+
+document.querySelectorAll("#nav-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    menuToggle.textContent = "☰";
+  });
+});
+
